@@ -13,8 +13,22 @@ const { title } = Astro.props;
         <meta charset="UTF-8" />
         <meta name="description" content="Astro description" />
         <meta name="viewport" content="width=device-width" />
-        <link rel="icon"  href="/icon.png" />
+        <link rel="icon" href="/icon.png" />
         <meta name="generator" content={Astro.generator} />
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=AW-16661008428"
+        ></script>
+        <script>
+            (window as any).dataLayer = (window as any).dataLayer || [];
+            function gtag(...args: any[]) {
+                (window as any).dataLayer.push(args);
+            }
+            gtag("js", new Date());
+    
+            gtag("config", "AW-16661008428");
+        </script>
         <meta
             name="description"
             content="MorocBet est une plateforme qui vous fournit les meilleurs conseils et prédictions de paris pour tous vos sports préférés. Nous avons une équipe d'experts qui analysent les dernières tendances et statistiques pour vous aider à prendre des décisions éclairées lorsque vous placez vos paris. Que vous soyez un parieur chevronné ou que vous commenciez tout juste, MorocBet a quelque chose pour tout le monde. Alors pourquoi attendre ? Commencez à gagner dès aujourd'hui avec MorocBet !"
@@ -23,7 +37,7 @@ const { title } = Astro.props;
             name="keywords"
             content="MorocBet, paris sportifs, conseils de paris, prédictions, sports, paris, conseils, prédictions, expert, analyse, tendances, statistiques, décisions éclairées, paris, parieur, gagnant, Linebet, Xbet, application, mobile, Android, iOS"
         />
-
+    
         <link rel="sitemap" href="/sitemap-index.xml" />
         <title>{title}</title>
     </head>
